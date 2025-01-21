@@ -52,7 +52,6 @@ import matplotlib.pyplot as plt
    - Comparación entre algoritmos de optimización para determinar el que mejor equilibra precisión y rendimiento.
    - Métricas de evaluación obtenidas para los subconjuntos de validación y prueba.
 
-## Resultados
 ### Métricas Clave
 Las métricas principales evaluadas incluyeron:
 - **Exactitud (Accuracy)**
