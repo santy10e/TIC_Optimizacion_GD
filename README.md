@@ -1,29 +1,29 @@
-# Optimización de la Precisión en la Detección de Noticias Falsas de Política
+# Optimization of Accuracy in Political Fake News Detection
 
-Este proyecto tiene como objetivo mejorar la precisión en la detección de noticias falsas relacionadas con política mediante la aplicación y comparación de diferentes algoritmos de optimización en la regresión logística.
+This project aims to improve accuracy in the detection of political fake news through the application and comparison of different optimization algorithms applied to logistic regression.
 
-## Resumen del Proyecto
-Se implementaron y optimizaron algoritmos de descenso de gradiente como:
-- Gradiente Descendente (GD)
-- Gradiente Descendente Estocástico (SGD)
-- Mini-Batch Gradiente Descendente (MBGD)
+## Project Overview
+Several gradient-based optimization algorithms were implemented and tuned, including:
+- Gradient Descent (GD)
+- Stochastic Gradient Descent (SGD)
+- Mini-Batch Gradient Descent (MBGD)
 - Adagrad
 - Adam
 - RMSProp
 
-El conjunto de datos consta de **74,276 registros** divididos en tres subconjuntos:
-- **70% (Entrenamiento):** Datos utilizados para entrenar el modelo.
-- **15% (Validación):** Datos utilizados para ajustar los hiperparámetros.
-- **15% (Prueba):** Datos utilizados para evaluar el desempeño final del modelo.
+The dataset consists of **74,276 records**, divided into three subsets:
+- **70% (Training):** Data used to train the model.
+- **15% (Validation):** Data used for hyperparameter tuning.
+- **15% (Test):** Data used to evaluate the final model performance.
 
-## Datos y Preprocesamiento
-Se trabajó con un conjunto de datos preprocesado con los siguientes pasos principales:
-- **Vectorización de texto:** Se utilizó `TfidfVectorizer` para convertir texto en vectores numéricos.
-- **Selección de características:** Implementada mediante `SelectKBest` y chi-cuadrado.
-- **Estandarización:** Se usó `StandardScaler` para normalizar los datos.
+## Data and Preprocessing
+A preprocessed dataset was used, following these main steps:
+- **Text vectorization:** `TfidfVectorizer` was used to transform text into numerical feature vectors.
+- **Feature selection:** Implemented using `SelectKBest` with the chi-square test.
+- **Standardization:** `StandardScaler` was applied to normalize the data.
 
-### Bibliotecas Utilizadas
-Las bibliotecas principales empleadas fueron:
+## Libraries Used
+The primary libraries used in this project were:
 ```python
 import numpy as np
 import pandas as pd
@@ -38,55 +38,54 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 ```
 
-## Metodología
-1. **División de Datos:**
-   - **70% Entrenamiento**: 51,993 registros
-   - **15% Validación**: 11,141 registros
-   - **15% Prueba**: 11,142 registros
+## Methodology
+1. **Data Splitting:**
+   - **70% Training:** 51,993 records
+   - **15% Validation:** 11,141 records
+   - **15% Test:** 11,142 records
 
-2. **Entrenamiento del Modelo:**
-   - Implementación de diferentes algoritmos de optimización.
-   - Monitoreo de métricas clave como `accuracy`, `precision`, `f1_score` y análisis de matrices de confusión.
+2. **Model Training:**
+   - Implementation of multiple optimization algorithms.
+   - Monitoring of key metrics such as `accuracy`, `precision`, `f1_score`, along with confusion matrix analysis.
 
-3. **Optimización de Algoritmos:**
-   - Comparación entre algoritmos de optimización para determinar el que mejor equilibra precisión y rendimiento.
-   - Métricas de evaluación obtenidas para los subconjuntos de validación y prueba.
+3. **Algorithm Optimization:**
+   - Comparison of optimization algorithms to identify the approach that best balances accuracy and computational efficiency.
+   - Evaluation metrics obtained on both validation and test subsets.
 
-### Métricas Clave
-Las métricas principales evaluadas incluyeron:
-- **Exactitud (Accuracy)**
-- **Precisión (Precision)**
+### Key Metrics
+The primary evaluation metrics included:
+- **Accuracy**
+- **Precision**
 - **F1 Score**
-- **Matriz de Confusión**
+- **Confusion Matrix**
 
-### Comparación entre Algoritmos
-Se realizó una evaluación comparativa para determinar el desempeño de cada algoritmo de optimización en términos de:
-- Convergencia
-- Estabilidad
-- Precisión final
+### Algorithm Comparison
+A comparative evaluation was conducted to assess the performance of each optimization algorithm in terms of:
+- Convergence
+- Stability
+- Final accuracy
 
-## Visualización de Resultados
-Las gráficas generadas incluyeron:
-- **Curvas de aprendizaje:** Para monitorear la convergencia de los algoritmos.
-- **Matriz de confusión:** Para analizar errores de clasificación.
+## Results Visualization
+The generated visualizations included:
+- **Learning curves:** To monitor algorithm convergence.
+- **Confusion matrix:** To analyze classification errors.
 
-## Requisitos
+## Requirements
 - Python 3.8+
-- Bibliotecas necesarias:
-  ```bash
-  pip install numpy pandas scikit-learn torch matplotlib
+- Required libraries:
+```bash
+pip install numpy pandas scikit-learn torch matplotlib
   ```
 
-## Ejecución
-1. Clona el repositorio:
+## Execution
+1. Clone the repository:
    ```bash
    git clone <URL del repositorio>
    ```
-2. Instala las librerias necesarias.
-3. Ejecuta el script con el kernel 3.11:
+2.	Install the required libraries.
+3.	Run the script using the Python 3.11 kernel.
 
 ## Créditos
-Proyecto desarrollado como parte de un esfuerzo por mejorar la detección de noticias falsas utilizando técnicas  de machine learning y optimización.
-
+Project developed as part of an effort to improve fake news detection using machine learning and optimization techniques.
 ---
-**Nota:** Este README es un resumen del trabajo realizado y puede ser actualizado con detalles adicionales sobre los resultados experimentales.
+**Nota:** This README is a summary of the work conducted and may be updated with additional details regarding experimental results.
